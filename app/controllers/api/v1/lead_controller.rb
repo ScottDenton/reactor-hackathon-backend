@@ -98,7 +98,10 @@ headers={
   'Authorization': 'Bearer e7675dd3-ff3b-434b-95aa-70251cc3784b_88140dd4-f13e-4ce3-8322-6eaf2ee9a2d2'
 }
 
-  response = HTTParty.post(url, headers: headers, body: @info)
+  response = HTTParty.post(url, {
+    headers: headers,
+    body: @info.to_json
+  })
   @lead= response.body
 
     render json: @lead
