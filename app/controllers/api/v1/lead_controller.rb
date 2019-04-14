@@ -107,8 +107,4 @@ headers={
     render json: @lead
   end
 
-  def postRequest
-
-
-  end
 end
